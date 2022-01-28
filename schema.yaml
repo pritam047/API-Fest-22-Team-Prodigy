@@ -1,0 +1,35 @@
+    MemeListing:
+      type: array
+      items:
+        $ref: "#/components/schemas/Meme"
+    Meme:
+      type: object
+      required:
+        - creator
+        - memeTitle
+        - topText
+        - bottomText
+        - imgUrl
+        - tags
+      properties:
+        id:
+          description: Unique identifier for the meme
+          type: string
+        creator:
+          description: The name of the creator.
+          type: string
+        memeTitle:
+          description: a good title for people to find meme easily.
+          type: string  
+        topText:
+          description: The top text for the meme.
+          type: string
+        bottomText:
+          description: The bottom text for the meme.
+          type: string
+        imgUrl:
+          description: The top text for the meme.
+          type: string
+        tags:
+          description: The top text for the meme.
+          type: string    

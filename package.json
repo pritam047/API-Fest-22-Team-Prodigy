@@ -16,7 +16,10 @@
   "author": "Pritam",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
     "fastify": "^3.27.0",
+    "mongoose": "^6.1.8",
     "nanoid": "^3.2.0"
   }
 }

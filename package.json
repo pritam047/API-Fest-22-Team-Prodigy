@@ -4,7 +4,8 @@
   "description": "Simple meme generator to learn about APIs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "keywords": [
     "Nodejs",
@@ -17,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "fastify": "^3.27.0",
-    "nanoid": "^3.2.0"
+    "nanoid": "^3.2.0",
+    "nodemon": "^2.0.15"
   }
 }

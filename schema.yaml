@@ -1,35 +1,132 @@
-    MemeListing:
-      type: array
-      items:
-        $ref: "#/components/schemas/Meme"
-    Meme:
-      type: object
-      required:
+openapi: 3.0.0
+info:
+version: v0.1.0
+title: Meme Generator
+description: "This is an API for managing list of dank memes."
+servers:
+url: "http://api.example.com/"
+paths:
+/memes:
+get:
+summary: Memes
+operationId: getMemes
+tags: - Memes
+responses: 
+"200":
+description: Meme
+content:
+application/json:
+schema:
+$ref: "#/components/schemas/MemeListing"
+post:
+summary: Meme
+operationId: addMeme
+tags:
+- Meme
+requestBody:
+required: true
+description: Meme
+content:
+application/json:
+schema:
+$ref: "#/components/schemas/Meme"
+responses:
+"201":
+description: Meme
+content:
+application/json:
+schema:
+$ref: "#/components/schemas/Meme"
+/memes/{id}:
+get:
+summary: Meme
+operationId: getMeme
+parameters:
+- name: id
+in: path
+description: The unique id.
+required: true
+schema:
+type: string
+tags:
+- Meme
+responses:
+"200":
+description: Meme
+content:
+application/json:
+schema:
+$ref: "#/components/schemas/Meme"
+put:
+summary: Meme
+operationId: updateMeme
+parameters:
+- name: id
+in: path
+description: The unique id.
+required: true
+schema:
+type: string
+tags:
+- Meme
+requestBody:
+description: Meme
+content:
+application/json:
+schema:
+$ref: "#/components/schemas/Meme"
+responses:
+"204":
+description: Meme
+delete:
+summary: Meme
+operationId: deleteMeme
+parameters:
+- name: id
+in: path
+description: The unique id.
+required: true
+schema:
+type: string
+tags:
+- Meme
+responses:
+"204":
+description: Meme
+components:
+schemas:
+MemeListing:
+type: array
+items:
+$ref: "#/components/schemas/Meme"
+Meme:
+type: object
+required:
         - creator
         - memeTitle
         - topText
         - bottomText
         - imgUrl
         - tags
-      properties:
-        id:
-          description: Unique identifier for the meme
-          type: string
-        creator:
-          description: The name of the creator.
-          type: string
-        memeTitle:
-          description: a good title for people to find meme easily.
-          type: string  
-        topText:
-          description: The top text for the meme.
-          type: string
-        bottomText:
-          description: The bottom text for the meme.
-          type: string
-        imgUrl:
-          description: The top text for the meme.
-          type: string
-        tags:
-          description: The top text for the meme.
-          type: string    
+properties:
+id:
+description: Unique identifier for the meme
+type: string
+creator:
+description: The name of the creator.
+type: string
+memeTitle:
+description: a good title for people to find meme easily.
+type: string  
+topText:
+description: The top text for the meme.
+type: string
+bottomText:
+description: The bottom text for the meme.
+type: string
+imgUrl:
+description: The top text for the meme.
+type: string
+tags:
+description: The top text for the meme.
+type: string

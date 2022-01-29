@@ -1,0 +1,180 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #292828;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+a {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ffd139;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1060px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+main {
+    min-height: calc(100vh - 70px);
+}
+
+header {
+    background-color: black;
+   text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px;
+    color: rgb(248, 247, 247);
+    font-size: 3em;
+    font-family: impact, 'Segoe UI', 'Courier New', Courier, monospace;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-container>img {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 2px;
+
+}
+
+.grid-container>img:hover {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.meme-container {
+    display: flex;
+   flex-direction: column;
+    margin: 5px 0;
+}
+
+.meme-control {
+    display: flex;
+   flex-direction: column;
+} 
+
+.meme-container > button {
+    margin: 5px;
+    z-index: 1;
+}
+
+.txt-editor {
+    padding: 5px 10px;
+    border: 1px #f4511e solid;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.memeCanvas {
+    border: 2px solid white;
+    border-radius: 2px;
+    margin: 5px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+input[type=text] {
+    padding: 5px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+input[type=number] {
+    width: 45px;
+}
+
+#dl {
+    margin:5px;
+}
+
+
+footer {
+    height: 50px;
+    background-color: black;
+}
+
+.vertical-center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.clean-btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-full {
+    flex: 1;
+}

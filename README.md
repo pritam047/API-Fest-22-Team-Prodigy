@@ -117,6 +117,9 @@ You can deploy this project using any of the below platforms:
 
 https://marked-invited-bandana.glitch.me/memes
 
+## Screenshots
+![memesapi_prodigy](https://user-images.githubusercontent.com/42296778/151657578-81be71b6-e336-4f2b-b6cf-048a05763875.jpg)
+
 ## Authors
 
 - [@pritam047](https://www.github.com/pritam047)

@@ -18,7 +18,7 @@ fastify.register(openapiGlue, glueOptions);
 
 /* Example of defining a route for GET / */
 fastify.get("/", async (req, res) => {
-  res.send({ message: "hello world!" });
+  // res.send({ message: "hello world!" });
   res.redirect('/memes');
 });
 

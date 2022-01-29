@@ -3,6 +3,32 @@
 
 A simple meme generator app for meme lovers
 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Prerequisites
+- [Node.js](https://nodejs.org/en/download/)
+- [Git](https://git-scm.com/downloads)
+- A text editor(VSCode, SublimeText, Atom, etc.)
+- A laptop/pc with a proper internet connection
+
+## Tech Stack Used
+*Language:* JavaScript  
+*Platform:* Node.js  
+*Package management:* NPM  
+
+*Frameworks:*
+* Fastify
+
+*Hosting Platform:*
+* Glitch
+
+*Text Editor:*
+* Microsoft VSCode
+
+*API testing:*
+* Postman
 
 ## Run Locally
 
@@ -87,9 +113,14 @@ You can deploy this project using any of the below platforms:
 - [Glitch](https://glitch.com)
 - Any cloud service provider of your choice (AWS, GCP, Azure)
 
+## Demo
+
+https://marked-invited-bandana.glitch.me/memes
+
 ## Authors
 
 - [@pritam047](https://www.github.com/pritam047)
 - [@dhruvsol](https://www.github.com/dhruvsol)
 - [@zoboro](https://www.github.com/zoboro)
 - [@anshit](https://www.github.com/anshitpoddar)
+- [@ayush](https://www.github.com/iayush0verma12)

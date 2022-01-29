@@ -80,6 +80,13 @@ Start the server
 #### Testing APIs
 You can test our APIs using our Postman collection [here](https://www.postman.com/martian-spaceship-403381/workspace/api-fest-22-team-prodigy/request/8521507-522679ea-e47f-431e-ba92-5ab4d4270f66).
 
+## Deploying
+You can deploy this project using any of the below platforms:
+- [Railway](https://railway.app/)
+- [Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)
+- [Glitch](https://glitch.com)
+- Any cloud service provider of your choice (AWS, GCP, Azure)
+
 ## Authors
 
 - [@pritam047](https://www.github.com/pritam047)

@@ -3,9 +3,19 @@ const { nanoid } = require("nanoid");
 const mongoose = require("mongoose")
 const cors = require("cors")
 
+const Service = require("./service.js");
+
+
+require("dotenv").config();
+
+const glueOptions = {
+  specification: `${__dirname}/schema.yaml`,
+  service: new Service(),
+};
+
+fastify.register(openapiGlue, glueOptions);
 
 /* Example of defining a route for GET / */
-require("dotenv").config();
 fastify.get("/", async (req, res) => {
   res.send({ message: "hello world!" });
 });

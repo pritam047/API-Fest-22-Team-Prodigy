@@ -14,6 +14,7 @@ class Service {
 
   addMeme = async (req, res) => {
     // create and save Meme to db
+    console.log(req.body);
     const newMeme = await Meme.create(req.body);
 
     res.code(201).send(newMeme);
@@ -24,10 +25,10 @@ class Service {
     const { id } = req.params;
 
     // check that Meme exists
-    const Meme = await Meme.findById(id);
+    const findMeme = await Meme.findById(id);
 
-    if (Meme) {
-      res.send(Meme);
+    if (findMeme) {
+      res.send(findMeme);
     } else {
       res.code(404).send({ message: `Meme with id '${id}' not found` });
     }
@@ -38,13 +39,13 @@ class Service {
     const { id } = req.params;
 
     // check that Meme exists
-    const Meme = await Meme.findById(id);
+    const updtMeme = await Meme.findById(id);
 
-    if (Meme) {
+    if (updtMeme) {
       // Update Meme in database
-      await Meme.update(req.body);
+      await Meme.updateOne(req.body);
       // send empty response with status 204
-      res.code(204).send();
+      res.code(204).send({message: `Meme with id ${id} updated`});
     } else {
       res.code(404).send({ message: `Meme with id '${id}' not found` });
     }
@@ -55,13 +56,13 @@ class Service {
     const { id } = req.params;
 
     // check that restuarant exists
-    const Meme = await Meme.findById(id);
+    const delMeme = await Meme.findById(id);
 
-    if (Meme) {
+    if (delMeme) {
       // Delete Meme from database
       await Meme.findByIdAndRemove(id);
       // send empty response with status 204
-      res.code(204).send();
+      res.code(204).send({message: `Meme with id ${id} deleted`});
     } else {
       res.code(404).send({ message: `Meme with id '${id}' not found` });
     }

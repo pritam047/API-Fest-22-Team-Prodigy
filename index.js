@@ -1,9 +1,10 @@
 const fastify = require("fastify")({ logger: true });
+const openapiGlue = require("fastify-openapi-glue");
 const { nanoid } = require("nanoid");
 const mongoose = require("mongoose")
 const cors = require("cors")
 
-const Service = require("./service.js");
+const Service = require("./service");
 
 
 require("dotenv").config();
@@ -18,6 +19,7 @@ fastify.register(openapiGlue, glueOptions);
 /* Example of defining a route for GET / */
 fastify.get("/", async (req, res) => {
   res.send({ message: "hello world!" });
+  res.redirect('/memes');
 });
 
 
